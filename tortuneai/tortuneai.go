@@ -7,7 +7,7 @@ import (
 	"cloud.google.com/go/vertexai/genai"
 )
 
-const Version = "0.0.2"
+const Version = "0.0.3"
 
 // HitMe proxies a text prompt to Google Cloud's gemini-pro model hosted on
 // Vertex AI and returns the generated response from the model. If no prompt
@@ -31,12 +31,11 @@ func HitMe(prompt string, project string) (string, error) {
 		project,
 		region,
 	)
-
 	if err != nil {
 		return "", err
 	}
 
-	model := client.GenerativeModel("gemini-pro")
+	model := client.GenerativeModel("gemini-1.5-flash-001")
 
 	response, err := model.GenerateContent(ctx, genai.Text(prompt))
 	if err != nil {

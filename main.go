@@ -13,7 +13,7 @@ func main() {
 	versionToggle := flag.Bool("version", false, "show version info")
 	flag.Parse()
 
-	if *versionToggle == true {
+	if *versionToggle {
 		fmt.Printf("tortuneai version %s\n", tortuneai.Version)
 		return
 	}
