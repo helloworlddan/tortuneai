@@ -7,7 +7,7 @@ import (
 	"cloud.google.com/go/vertexai/genai"
 )
 
-const Version = "0.0.3"
+const Version = "0.0.4"
 
 // HitMe proxies a text prompt to Google Cloud's gemini-pro model hosted on
 // Vertex AI and returns the generated response from the model. If no prompt

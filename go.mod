@@ -1,6 +1,6 @@
 module github.com/helloworlddan/tortuneai
 
-go 1.19
+go 1.22
 
 require (
 	cloud.google.com/go/vertexai v0.6.0
