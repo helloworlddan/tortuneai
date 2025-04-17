@@ -35,7 +35,7 @@ func HitMe(prompt string, project string) (string, error) {
 		return "", err
 	}
 
-	model := client.GenerativeModel("gemini-1.5-flash-001")
+	model := client.GenerativeModel("gemini-2.0-flash-001")
 
 	response, err := model.GenerateContent(ctx, genai.Text(prompt))
 	if err != nil {
